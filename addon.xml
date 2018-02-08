@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.estuaryv2.mod" version="1.1.4" name="Estuaryv2.mod.lite" provider-name="Safonov_ivan, YLLOW_DRAGON, phil65, Ichabod Fletchman">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="script.artistslideshow" version="2.0.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Estuaryv2.mod skin by phil65, Safonov_ivan.</summary>
+		<summary lang="ru_RU">Обложка Estuaryv2.mod. Авторы: phil65, Piers, Safonov_ivan.</summary>
+		<description lang="en_GB">Estuaryv2.mod is the default modernized skin for Kodi 17.0 and above. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="ru_RU">Estuaryv2.mod — это стандартная модернизированная обложка Kodi, начиная с версии 17.0.&#10;Простая и понятная в использовании для новых пользователей Kodi.</description>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<forum>http://xbmc.ru/forum/showthread.php?t=14133</forum>
+		<source>https://yadi.sk/d/OpX-1xNr39QtdK/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
