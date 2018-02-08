@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot1))">Skin.SetString(homemenu_slot1,1)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot2))">Skin.SetString(homemenu_slot2,2)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot3))">Skin.SetString(homemenu_slot3,3)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot4))">Skin.SetString(homemenu_slot4,4)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot5))">Skin.SetString(homemenu_slot5,5)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot6))">Skin.SetString(homemenu_slot6,6)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot7))">Skin.SetString(homemenu_slot7,7)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot8))">Skin.SetString(homemenu_slot8,8)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot9))">Skin.SetString(homemenu_slot9,9)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot10))">Skin.SetString(homemenu_slot10,10)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu_slot11))">Skin.SetString(homemenu_slot11,11)</onload>
+	<defaultcontrol>9000</defaultcontrol>
+	<backgroundcolor>background</backgroundcolor>
+	<controls>
+		<control type="button" id="20000">
+			<include>HiddenObject</include>
+			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
+			<onfocus>SetFocus(2000)</onfocus>
+			<onclick>noop</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(20000)</visible>
+		</control>
+		<control type="button" id="20001">
+			<include>HiddenObject</include>
+			<animation effect="fade" time="300" start="100" end="0">Focus</animation>
+			<onfocus>SetFocus(2000)</onfocus>
+			<onclick>noop</onclick>
+			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
+		</control>
+		<include>DefaultBackground</include>
+		<control type="multiimage">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<aspectratio>scale</aspectratio>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" time="400">VisibleChange</animation>
+			<!-- <imagepath background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</imagepath> -->
+			<imagepath background="true" colordiffuse="$VAR[Background_Opacity]">$VAR[HomeFanartVar]</imagepath>
+			<visible>!Player.HasMedia</visible>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
+			<!--область с виджетами-->			
+			<include>HomeWidgetMenu</include>
+			<!--панель кнопок-->			
+			<include>HomeMainMenu</include>
+			<include>BottomBar</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="" />
+			</include>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<top>30</top>
+				<left>90</left>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="button_focus">icons/logo.png</texture>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+				</control>
+			</control>
+			<control type="rss">
+				<include condition="!Skin.HasSetting(FullScreenWidgetMenu)">NotHideMainMenuWithWidgets</include>
+				<animation effect="slide" end="462,0" time="250" tween="quadratic" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus | ControlGroup(710).HasFocus] + Skin.HasSetting(FullScreenWidgetMenu)">Conditional</animation>
+				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+				<!-- <left>462</left> -->
+				<bottom>0</bottom>
+				<height>39</height>
+				<width>100%</width>
+				<font>font12</font>
+				<urlset>1</urlset>
+				<hitrect x="-100" y="0" w="1" h="1" />
+				<titlecolor>button_focus</titlecolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<headlinecolor>FFC0C0C0</headlinecolor>
+			</control>
+		</control>
+	</controls>
+</window>

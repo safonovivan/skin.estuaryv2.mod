@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<controls>
+		<include>DefaultBackground</include>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<control type="textbox">
+				<bottom>230</bottom>
+				<width>100%</width>
+				<height>100</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font14</font>
+				<label>$LOCALIZE[31098]</label>
+			</control>
+			<control type="button" id="20">
+				<description>Power push button</description>
+				<centerleft>50%</centerleft>
+				<bottom>100</bottom>
+				<width>500</width>
+				<height>130</height>
+				<label>$LOCALIZE[31072]</label>
+				<font>font12</font>
+				<align>center</align>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<colordiffuse>CCFFFFFF</colordiffuse>
+			</control>
+		</control>
+		<control type="group">
+				<depth>DepthBars</depth>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<top>30</top>
+				<left>90</left>
+				<control type="image">
+					<aspectratio>keep</aspectratio>
+					<width>56</width>
+					<height>56</height>
+					<texture colordiffuse="button_focus">icons/logo.png</texture>
+				</control>
+				<control type="image">
+					<left>40</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>36</height>
+					<texture>icons/logo-text.png</texture>
+				</control>
+			</control>
+		<control type="group">
+			<include>OpenClose_Left</include>
+			<top>10</top>
+			<control type="label">
+				<left>10</left>
+				<top>300</top>
+				<right>10</right>
+				<height>20</height>
+				<font>font37</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>
+			<control type="fixedlist" id="52">
+				<top>35%</top>
+				<height>300</height>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onback>FirstPage</onback>
+				<focusposition>3</focusposition>
+				<movement>1</movement>
+				<onup>20</onup>
+				<ondown>20</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<itemlayout height="260" width="320">
+					<control type="image">
+						<left>45</left>
+						<top>10</top>
+						<width>230</width>
+						<height>230</height>
+						<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>250</top>
+						<right>10</right>
+						<height>20</height>
+						<font>font37</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="260" width="320">
+					<control type="group">
+						<animation type="Focus">
+							<effect type="zoom" start="100" end="130" time="200" tween="sine" easing="inout" center="120,120" />
+						</animation>
+						<animation type="Unfocus">
+							<effect type="zoom" start="130" end="100" time="400" tween="sine" easing="inout" center="120,120" />
+						</animation>
+						<control type="image">
+							<left>45</left>
+							<top>10</top>
+							<width>230</width>
+							<height>230</height>
+							<texture fallback="DefaultUser.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>250</top>
+							<right>10</right>
+							<height>20</height>
+							<font>font37</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>button_focus</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<include>TopBar</include>
+		<include>BottomBar</include>
+	</controls>
+</window>
