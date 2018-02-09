@@ -234,12 +234,11 @@
 					<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
 					<visible>Skin.HasSetting(VisibleButtonCategories)</visible>
 				</control>
-				<control type="radiobutton" id="769">
+				<control type="radiobutton" id="770">
 					<label>$LOCALIZE[45011]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(systembutton)</onclick>
 					<selected>Skin.HasSetting(systembutton)</selected>
-					<enable>Skin.HasSetting(setting_safonov)</enable>
 				</control>                
 				<control type="radiobutton" id="714">
                     <description>Enable custom list addons</description>					

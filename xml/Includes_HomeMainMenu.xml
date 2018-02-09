@@ -198,7 +198,7 @@
 		</definition>
 	</include>
 	<include name="HomeMainMenuItem">
-		<control type="list" id="9000">
+		<control type="fixedlist" id="9000">
 			<left>0</left>
 			<top>220</top>
 			<width>462</width>
