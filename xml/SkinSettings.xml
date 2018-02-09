@@ -139,50 +139,6 @@
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
 				</control>
 			</control>
-<!-- 			<control type="grouplist" id="610">
-				<top>160</top>
-				<left>0</left>
-				<right>0</right>
-				<bottom>140</bottom>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>610</onup>
-				<pagecontrol>60</pagecontrol>
-				<ondown>610</ondown>
-				<visible>Container(9000).HasFocus(2)</visible>
-				<control type="button" id="611">
-					<label>$LOCALIZE[31210]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>ActivateWindow(1120)</onclick>
-				</control>
-				<control type="button" id="612">
-					<label>$LOCALIZE[31203]</label>
-					<label2>$VAR[ShiftCategoriesTypeVar]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),2)">Skin.SetString(shift_categories,0)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),1)">Skin.SetString(shift_categories,2)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),0)">Skin.SetString(shift_categories,1)</onclick>
-				</control>
-				<control type="radiobutton" id="613">
-					<label>$LOCALIZE[31157]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(VisibleButtonCategories)</selected>
-					<onclick>Skin.ToggleSetting(VisibleButtonCategories)</onclick>
-					<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
-				</control>
-				<control type="button" id="6131">
-					<label>   - $LOCALIZE[342]\$LOCALIZE[20343]\$LOCALIZE[20391]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
-					<visible>!Skin.HasSetting(VisibleButtonCategories)</visible>
-				</control>
-				<control type="button" id="6132">
-					<label>   - $LOCALIZE[2]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
-					<visible>!Skin.HasSetting(VisibleButtonCategories)</visible>
-				</control>
-			</control> -->
 			<control type="grouplist" id="710">
 				<top>160</top>
 				<left>0</left>
@@ -239,7 +195,19 @@
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(systembutton)</onclick>
 					<selected>Skin.HasSetting(systembutton)</selected>
-				</control>                
+				</control>   
+				<control type="radiobutton" id="771">
+					<label>$LOCALIZE[45012]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(Weatherbackgroundoff)</onclick>
+					<selected>Skin.HasSetting(Weatherbackgroundoff)</selected>
+				</control>
+				<control type="radiobutton" id="772">
+					<label>$LOCALIZE[45014]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(LabelFocusWidget)</onclick>
+					<selected>Skin.HasSetting(LabelFocusWidget)</selected>
+				</control>
 				<control type="radiobutton" id="714">
                     <description>Enable custom list addons</description>					
 					<include>DefaultSettingButton</include>
@@ -247,13 +215,6 @@
 					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
 					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
 				</control>
-				<!-- <control type="radiobutton" id="712"> -->
-                    <!-- <description>Enable custom list addons</description>					 -->
-					<!-- <include>DefaultSettingButton</include> -->
-                    <!-- <label>$LOCALIZE[31212](!не_работает!)</label> -->
-					<!-- <onclick>Skin.ToggleSetting(enable_custom_list_pvr)</onclick> -->
-					<!-- <selected>Skin.HasSetting(enable_custom_list_pvr)</selected> -->
-				<!-- </control> -->
 				<control type="label" id="720">
                     <include>DefaultSettingLabel</include>
                     <label>$LOCALIZE[342]</label>
