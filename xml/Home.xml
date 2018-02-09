@@ -75,12 +75,11 @@
 				</control>
 			</control>
 			<control type="rss">
-				<include condition="!Skin.HasSetting(FullScreenWidgetMenu)">NotHideMainMenuWithWidgets</include>
 				<animation effect="slide" end="462,0" time="250" tween="quadratic" easing="out" condition="[Control.HasFocus(9000) | ControlGroup(700).HasFocus | ControlGroup(710).HasFocus] + Skin.HasSetting(FullScreenWidgetMenu)">Conditional</animation>
 				<animation effect="slide" end="0,90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
-				<!-- <left>462</left> -->
+				<include condition="!Skin.HasSetting(FullScreenWidgetMenu) + Skin.HasSetting(systembutton)">NotHideMainMenuWithWidgets</include>
 				<bottom>0</bottom>
 				<height>39</height>
 				<width>100%</width>

@@ -962,4 +962,10 @@
 	<include name="HideMainMenuWithWidgets">
 		<left>-40</left>
 	</include>
+	<include name="twopanel">
+		<bottom>110</bottom>
+	</include>
+	<include name="onepanel">
+		<bottom>-10</bottom>
+	</include>
 </includes>

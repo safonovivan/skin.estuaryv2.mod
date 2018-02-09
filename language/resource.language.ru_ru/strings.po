@@ -548,6 +548,8 @@ msgctxt "#31201"
 msgid "Next track"
 msgstr "Следующая композиция"
 
+# EXTENDED ADDED VALUE SAFONOV_IVAN
+
 msgctxt "#31202"
 msgid "Show music visualisation screen directly when playing song"
 msgstr "Artist Slideshow на весь экран при проигрывани музыки"
@@ -713,3 +715,67 @@ msgstr "Виджет плейлиста"
 msgctxt "#31215"
 msgid "Widget"
 msgstr "Виджет"
+
+msgctxt "#45000"
+msgid "Mixed widgets add-ons: audio, video, photos, software"
+msgstr "Смешанные виджеты дополнений: аудио, видео, фото, программные"
+
+msgctxt "#45001"
+msgid "Widget 1"
+msgstr "Виджет 1"
+
+msgctxt "#45002"
+msgid "Widget 2"
+msgstr "Виджет 2"
+
+msgctxt "#45003"
+msgid "Widget 3"
+msgstr "Виджет 3"
+
+msgctxt "#45004"
+msgid "Widget 4"
+msgstr "Виджет 4"
+
+msgctxt "#45005"
+msgid "Widget 5"
+msgstr "Виджет 5"
+
+msgctxt "#45006"
+msgid "Widget 6"
+msgstr "Виджет 6"
+
+msgctxt "#45007"
+msgid "Widget 7"
+msgstr "Виджет 7"
+
+msgctxt "#45008"
+msgid "Widget 8"
+msgstr "Виджет 8"
+
+msgctxt "#45009"
+msgid "MOD safonov_ivan"
+msgstr "MOD safonov_ivan"
+
+msgctxt "#45010"
+msgid "Widgets to fullscreen"
+msgstr "Виджеты на весь экран"
+
+msgctxt "#45011"
+msgid "Two panels of system buttons"
+msgstr "Две панели системных кнопок"
+
+msgctxt "#45012"
+msgid "Hide weather background icon"
+msgstr "Скрыть фон на иконках погоды"
+
+msgctxt "#45013"
+msgid "Hide background on category icons"
+msgstr "Скрыть фон на иконках категорий"
+
+msgctxt "#45014"
+msgid "Display name of selected item"
+msgstr "Отображать название выбранного пункта"
+
+msgctxt "#45015"
+msgid "Media settings"
+msgstr "Настройки медиатеки"

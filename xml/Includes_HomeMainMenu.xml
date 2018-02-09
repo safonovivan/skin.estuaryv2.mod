@@ -18,25 +18,46 @@
 					<onright>2000</onright>
 					<align>justify</align>
 					<!--Кнопка проводника-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="801" />
 						<param name="onclick" value="ActivateWindow(filemanager)" />
 						<param name="icon" value="icons/filemanager.png" />
 					</include>	
 					<!--Кнопка дополнений-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="802" />
 						<param name="onclick" value="ActivateWindow(addonbrowser)" />
 						<param name="icon" value="icons/submenu/add-ons.png" />
 					</include>
 					<!--Кнопка настроек-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="803" />
 						<param name="onclick" value="ActivateWindow(settings)" />
 						<param name="icon" value="icons/settings.png" />
 					</include>
-					<include content="IconButton">
+					<!--Кнопка выключения-->
+					<include content="IconButton" condition="!Skin.HasSetting(systembutton)">
 						<param name="control_id" value="804" />
+						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
+						<param name="icon" value="icons/power.png" />
+						<param name="label" value="$LOCALIZE[33060]" />
+					</include>
+					<!--Кнопка настроек-->
+					<include content="IconButton" condition="!Skin.HasSetting(systembutton)">
+						<param name="control_id" value="805" />
+						<param name="onclick" value="ActivateWindow(settings)" />
+						<param name="icon" value="icons/settings.png" />
+						<param name="label" value="$LOCALIZE[21417]" />
+					</include>
+					<!--Кнопка поиска-->
+					<include content="IconButton" condition="!Skin.HasSetting(systembutton)">
+						<param name="control_id" value="806" />
+						<param name="onclick" value="ActivateWindow(1107)" />
+						<param name="icon" value="icons/search.png" />
+						<param name="label" value="$LOCALIZE[137]" />
+					</include>
+					<include content="IconButton">
+						<param name="control_id" value="807" />
 						<param name="onclick" value="Fullscreen" />
 						<param name="icon" value="icons/now-playing/fullscreen.png" />
 						<param name="label" value="$LOCALIZE[31000]" />
@@ -61,19 +82,19 @@
 					<onright>2000</onright>
 					<align>justify</align>
 					<!--Кнопка выключения-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="1701" />
 						<param name="onclick" value="ActivateWindow(shutdownmenu)" />
 						<param name="icon" value="icons/power.png" />
 					</include>								
 					<!--Кнопка избранного-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="1702" />
 						<param name="onclick" value="ActivateWindow(favourites)" />
 						<param name="icon" value="icons/favourites.png" />
 					</include>			
 					<!--Кнопка поиска-->
-					<include content="IconButton">
+					<include content="IconButton" condition="Skin.HasSetting(systembutton)">
 						<param name="control_id" value="1703" />
 						<param name="onclick" value="ActivateWindow(1107)" />
 						<param name="icon" value="icons/search.png" />
@@ -181,10 +202,14 @@
 			<left>0</left>
 			<top>220</top>
 			<width>462</width>
-			<bottom>110</bottom>
+			<include condition="Skin.HasSetting(systembutton)">twopanel</include>
+			<include condition="!Skin.HasSetting(systembutton)">onepanel</include>
+			<movement>6</movement>
+			<focusposition>1</focusposition>
 			<onfocus>ClearProperty(listposition,home)</onfocus>
 			<onright>SetFocus($INFO[Container(9000).ListItem.Property(menu_id)])</onright>
 			<onup>700</onup>
+			<ondown condition="!Skin.HasSetting(systembutton)">700</ondown>
 			<ondown>710</ondown>
 			<onleft>9500</onleft>
 			<scrolltime tween="cubic" easing="out">500</scrolltime>
@@ -308,7 +333,7 @@
 			</include>
 			<include>HomeSystemButtonsTop</include>
 			<include>HomeMainMenuItem</include>
-			<include>HomeSystemButtonsBottom</include>
+			<include condition="Skin.HasSetting(systembutton)">HomeSystemButtonsBottom</include>
 			<include>LeftBarCategoriesIcons</include>
 		</control>
 	</include>
