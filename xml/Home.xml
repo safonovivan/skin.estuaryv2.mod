@@ -54,6 +54,7 @@
 			</include>
 			<control type="group">
 				<depth>DepthBars</depth>
+				<animation effect="slide" end="-522,0" time="350" tween="quadratic" easing="out" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus + !ControlGroup(710).HasFocus] + Skin.HasSetting(FullScreenWidgetMenu)">Conditional</animation>
 				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
