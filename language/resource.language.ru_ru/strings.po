@@ -779,3 +779,12 @@ msgstr "Отображать название выбранного пункта"
 msgctxt "#45015"
 msgid "Media settings"
 msgstr "Настройки медиатеки"
+
+msgctxt "#45016"
+msgid "TV & Radio"
+msgstr "ТВ и Радио"
+
+msgctxt "#45017"
+msgid "Widget settings"
+msgstr "Настройки виджетов"
+

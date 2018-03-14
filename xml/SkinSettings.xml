@@ -56,17 +56,33 @@
 					<onclick condition="String.IsEmpty(Weather.Plugin)">ActivateWindow(servicesettings,weather)</onclick>
 					<selected>Skin.HasSetting(show_weatherinfo) + !String.IsEmpty(Weather.Plugin)</selected>
 				</control>
-				<control type="radiobutton" id="706">
+				<control type="radiobutton" id="705">
 					<label>$LOCALIZE[31207]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(show_datatopbar)</onclick>
 					<selected>Skin.HasSetting(show_datatopbar)</selected>
 				</control>
-				<control type="radiobutton" id="705">
+				<control type="radiobutton" id="706">
 					<label>$LOCALIZE[31160]</label>
 					<include>DefaultSettingButton</include>
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
+				</control>
+				<control type="button" id="707">
+					<label>$LOCALIZE[31210]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>ActivateWindow(1120)</onclick>
+				</control>
+				<control type="radiobutton" id="708">
+					<label>$LOCALIZE[45011]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>Skin.ToggleSetting(systembutton)</onclick>
+					<selected>Skin.HasSetting(systembutton)</selected>
+				</control>   
+				<control type="button" id="7132">
+					<label>$LOCALIZE[45017]</label>
+					<include>DefaultSettingButton</include>
+					<onclick>ActivateWindow(1122)</onclick>
 				</control>
 				<control type="button" id="70555">
 					<label>$LOCALIZE[31208]</label>
@@ -138,336 +154,6 @@
 					<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MovieGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
 				</control>
-			</control>
-			<control type="grouplist" id="710">
-				<top>160</top>
-				<left>0</left>
-				<right>0</right>
-				<bottom>140</bottom>
-				<onleft>9000</onleft>
-				<onright>60</onright>
-				<onup>710</onup>
-				<pagecontrol>60</pagecontrol>
-				<ondown>710</ondown>
-				<visible>Container(9000).HasFocus(4)</visible>
-				<control type="button" id="711">
-					<label>$LOCALIZE[31210]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>ActivateWindow(1120)</onclick>
-				</control>
-				<control type="radiobutton" id="712">
-					<label>$LOCALIZE[31213]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(FullScreenWidgetMenu)</selected>
-					<onclick>Skin.ToggleSetting(FullScreenWidgetMenu)</onclick>
-				</control>
-				<control type="button" id="7121">
-					<label>$LOCALIZE[31203]</label>
-					<label2>$VAR[ShiftCategoriesTypeVar]</label2>
-					<include>DefaultSettingButton</include>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),2)">Skin.SetString(shift_categories,0)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),1)">Skin.SetString(shift_categories,2)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(shift_categories),0)">Skin.SetString(shift_categories,1)</onclick>
-					<enable>!Skin.HasSetting(FullScreenWidgetMenu)</enable>
-				</control>
-				<control type="radiobutton" id="713">
-					<label>$LOCALIZE[31157]</label>
-					<include>DefaultSettingButton</include>
-					<selected>Skin.HasSetting(VisibleButtonCategories)</selected>
-					<onclick>Skin.ToggleSetting(VisibleButtonCategories)</onclick>
-				</control>
-				<control type="button" id="7131">
-					<label>   - $LOCALIZE[342]\$LOCALIZE[20343]\$LOCALIZE[20391]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=video,return)</onclick>
-					<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
-					<visible>Skin.HasSetting(VisibleButtonCategories)</visible>
-				</control>
-				<control type="button" id="7132">
-					<label>   - $LOCALIZE[2]</label>
-					<include>DefaultSettingButton</include>
-					<onclick condition="System.HasAddon(plugin.library.node.editor)">ActivateWindow(programs,plugin://plugin.library.node.editor/?ltype=music,return)</onclick>
-					<onclick condition="!System.HasAddon(plugin.library.node.editor)">InstallAddon(plugin.library.node.editor)</onclick>
-					<visible>Skin.HasSetting(VisibleButtonCategories)</visible>
-				</control>
-				<control type="radiobutton" id="770">
-					<label>$LOCALIZE[45011]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(systembutton)</onclick>
-					<selected>Skin.HasSetting(systembutton)</selected>
-				</control>   
-				<control type="radiobutton" id="771">
-					<label>$LOCALIZE[45012]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(Weatherbackgroundoff)</onclick>
-					<selected>Skin.HasSetting(Weatherbackgroundoff)</selected>
-				</control>
-				<control type="radiobutton" id="772">
-					<label>$LOCALIZE[45014]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.ToggleSetting(LabelFocusWidget)</onclick>
-					<selected>Skin.HasSetting(LabelFocusWidget)</selected>
-				</control>
-				<control type="radiobutton" id="714">
-                    <description>Enable custom list addons</description>					
-					<include>DefaultSettingButton</include>
-                    <label>$LOCALIZE[31209]</label>
-					<onclick>Skin.ToggleSetting(enable_custom_list_addons)</onclick>
-					<selected>Skin.HasSetting(enable_custom_list_addons)</selected>
-				</control>
-				<control type="label" id="720">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[342]</label>
-					<visible>Library.HasContent(movies)</visible>
-                </control>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="11" />
-                    <param name="title" value="$LOCALIZE[1037]" />
-                    <param name="flags" value="enable_custom_list_addons_video" />
-                    <param name="setadonnstype" value="Video" />
-                    <param name="type" value="xbmc.addon.video" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + Library.HasContent(movies)" />
-                </include>
-				<control type="radiobutton" id="769">
-					<label>$LOCALIZE[31010]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetInprogressMoviesMovieOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetInprogressMoviesMovieOff)</onclick>
-					<visible>Library.HasContent(movies)</visible>
-				</control>
-				<control type="radiobutton" id="723">
-					<label>$LOCALIZE[20386]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRecentUnwatchedMovieOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRecentUnwatchedMovieOff)</onclick>
-					<visible>Library.HasContent(movies)</visible>
-				</control>
-				<control type="radiobutton" id="724">
-					<label>$LOCALIZE[31007]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetUnwatchedMovieOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetUnwatchedMovieOff)</onclick>
-					<visible>Library.HasContent(movies)</visible>
-				</control>
-				<control type="radiobutton" id="725">
-					<label>$LOCALIZE[31006]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRandomMovieOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRandomMovieOff)</onclick>
-					<visible>Library.HasContent(movies)</visible>
-				</control>
-				<control type="radiobutton" id="726">
-					<label>$LOCALIZE[31075]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetSetsMovieOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetSetsMovieOff)</onclick>
-					<visible>Library.HasContent(movies)</visible>
-				</control>
-				<control type="label" id="730">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[20343]</label>
-					<visible>Library.HasContent(tvshows)</visible>
-                </control>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="12" />
-                    <param name="title" value="$LOCALIZE[1037]" />
-                    <param name="flags" value="enable_custom_list_addons_tvseries" />
-                    <param name="setadonnstype" value="TVSeries" />
-                    <param name="type" value="xbmc.addon.video" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + Library.HasContent(tvshows)" />
-                </include>
-				<control type="radiobutton" id="733">
-					<label>$LOCALIZE[626]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetInprogressTVShowsOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetInprogressTVShowsOff)</onclick>
-					<visible>Library.HasContent(tvshows)</visible>
-				</control>
-				<control type="radiobutton" id="734">
-					<label>$LOCALIZE[20387]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRecentUnwatchedEpisodesTVShowsOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRecentUnwatchedEpisodesTVShowsOff)</onclick>
-					<visible>Library.HasContent(tvshows)</visible>
-				</control>
-				<control type="radiobutton" id="735">
-					<label>$LOCALIZE[31122]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetUnwatchedEpisodesTVShowsOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetUnwatchedEpisodesTVShowsOff)</onclick>
-					<visible>Library.HasContent(tvshows)</visible>					
-				</control>
-				<control type="label" id="750">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[3]</label>
-					<visible>Skin.HasSetting(enable_custom_list_addons)</visible>
-                </control>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="13" />
-                    <param name="title" value="$LOCALIZE[1037]" />
-                    <param name="flags" value="enable_custom_list_addons_video_item" />
-                    <param name="setadonnstype" value="VideoItem" />
-                    <param name="type" value="xbmc.addon.video" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
-                </include>
-				<control type="label" id="761">
-				<include>DefaultSettingLabel</include>
-					<label>$LOCALIZE[20391]</label>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-					<param name="id1" value="14" />
-					<param name="title" value="$LOCALIZE[1037]" />
-					<param name="flags" value="enable_custom_list_addons_music_video" />
-					<param name="setadonnstype" value="Musicvideo" />
-					<param name="type" value="xbmc.addon.video" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + Library.HasContent(musicvideos)" />
-				</include>
-				<control type="radiobutton" id="762">
-					<label>$LOCALIZE[20390]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRecentlyAddedMusicVideosOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRecentlyAddedMusicVideosOff)</onclick>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<control type="radiobutton" id="763">
-					<label>$LOCALIZE[31151]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetUnwatchedMusicVideosOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetUnwatchedMusicVideosOff)</onclick>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<control type="radiobutton" id="764">
-					<label>$LOCALIZE[31013]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRandomMusicVideoArtistsOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRandomMusicVideoArtistsOff)</onclick>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<control type="radiobutton" id="765">
-					<label>$LOCALIZE[31152]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRandomMusicVideosOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRandomMusicVideosOff)</onclick>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<control type="radiobutton" id="766">
-					<label>$LOCALIZE[20388]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetMusicVideosStudiosOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetMusicVideosStudiosOff)</onclick>
-					<visible>Library.HasContent(musicvideos)</visible>
-				</control>
-				<control type="label" id="740">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[2]</label>
-					<visible>Library.HasContent(music)</visible>
-                </control>
-                <include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="15" />
-                    <param name="title" value="$LOCALIZE[1038]" />
-                    <param name="flags" value="enable_custom_list_addons_audio" />
-                    <param name="setadonnstype" value="Audio" />
-                    <param name="type" value="xbmc.addon.audio" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + Library.HasContent(music)" />
-                </include>
-				<control type="radiobutton" id="743">
-					<label>$LOCALIZE[517]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRecentlyPlayedAbumsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRecentlyPlayedAbumsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>
-				<control type="radiobutton" id="744">
-					<label>$LOCALIZE[359]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRecentlyAddedAbumsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRecentlyAddedAbumsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>
-				<control type="radiobutton" id="745">
-					<label>$LOCALIZE[31012]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRandomAbumsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRandomAbumsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>
-				<control type="radiobutton" id="746">
-					<label>$LOCALIZE[31013]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetRandomArtistsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetRandomArtistsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>
-				<control type="radiobutton" id="747">
-					<label>$LOCALIZE[31014]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetUnplayedAlbumsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetUnplayedAlbumsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>
-				<control type="radiobutton" id="748">
-					<label>$LOCALIZE[31011]</label>
-					<include>DefaultSettingButton</include>
-					<selected>!Skin.HasSetting(WidgetMostplayedAlbumsMusicOff)</selected>
-					<onclick>Skin.ToggleSetting(WidgetMostplayedAlbumsMusicOff)</onclick>
-					<visible>Library.HasContent(music)</visible>
-				</control>		
-				<control type="label" id="760">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[1]</label>
-					<visible>Skin.HasSetting(enable_custom_list_addons)</visible>
-                </control>
-                <include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="16" />
-                    <param name="title" value="$LOCALIZE[1039]" />
-                    <param name="flags" value="enable_custom_list_addons_image" />
-                    <param name="setadonnstype" value="Image" />
-                    <param name="type" value="xbmc.addon.image" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons)" />
-                </include>
-				<control type="label" id="767">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[19020]</label>
-					<visible>Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon</visible>
-                </control>
-                <include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="17" />
-                    <param name="title" value="$LOCALIZE[1037]" />
-                    <param name="flags" value="enable_custom_list_addons_video_tv" />
-                    <param name="setadonnstype" value="VideoTV" />
-                    <param name="type" value="xbmc.addon.video" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon" />
-                </include>
-                <include content="HomeMainCustomWidgetsAddonsSettings">
-                    <param name="id1" value="18" />
-                    <param name="title" value="$LOCALIZE[1043]" />
-                    <param name="flags" value="enable_custom_list_addons_programs_tv" />
-                    <param name="setadonnstype" value="ProgramsTV" />
-                    <param name="type" value="xbmc.addon.executable" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon" />
-                </include>
-				<control type="label" id="768">
-                    <include>DefaultSettingLabel</include>
-                    <label>$LOCALIZE[19021]</label>
-					<visible>Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon</visible>
-                </control>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-					<param name="id1" value="19" />
-					<param name="title" value="$LOCALIZE[1038]" />
-					<param name="flags" value="enable_custom_list_addons_audio_radio" />
-					<param name="setadonnstype" value="AudioRadio" />
-					<param name="type" value="xbmc.addon.audio" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon" />
-				</include>
-				<include content="HomeMainCustomWidgetsAddonsSettings">
-					<param name="id1" value="20" />
-					<param name="title" value="$LOCALIZE[1043]" />
-					<param name="flags" value="enable_custom_list_addons_programs_radio" />
-					<param name="setadonnstype" value="ProgramsRadio" />
-					<param name="type" value="xbmc.addon.executable" />
-					<param name="visible" value="Skin.HasSetting(enable_custom_list_addons) + System.HasPVRAddon" />
-				</include>
 			</control>
 			<control type="grouplist" id="800">
 				<top>160</top>
@@ -549,10 +235,6 @@
 				<content>
 					<item id="1">
 						<label>$LOCALIZE[128]</label>
-						<onclick>noop</onclick>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[31061]</label>
 						<onclick>noop</onclick>
 					</item>
 					<item id="3">

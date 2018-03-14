@@ -349,6 +349,7 @@
 						<param name="list_id" value="11900"/>
 					</include>
 					<include content="WidgetListCategories">
+						<param name="visible" value="!Skin.HasSetting(HomeMenuNoVideoButton)"/>
 						<param name="content_path" value="sources://video/"/>
 						<param name="widget_header" value="$LOCALIZE[20094]"/>
 						<param name="widget_target" value="videos"/>
@@ -371,6 +372,7 @@
 						<param name="fallback_icon" value="DefaultAddon.png"/>
 					</include>
 					<include content="WidgetListCategories">
+						<param name="visible" value="!Skin.HasSetting(HomeMenuNoPlaylistButton)"/>
 						<param name="content_path" value="special://videoplaylists/"/>
 						<param name="widget_header" value="$LOCALIZE[136]"/>
 						<param name="widget_target" value="videos"/>
@@ -803,7 +805,8 @@
 				</include>
 				<control type="grouplist" id="4001">
 					<include>WidgetGroupListCommon</include>
-					<include content="WidgetListCategories" condition="!Skin.HasSetting(HomeMenuNoPicturesButton)">
+					<include content="WidgetListCategories">
+						<param name="visible" value="!Skin.HasSetting(HomeMenuNoPicturesButton)"/>
 						<param name="content_path" value="sources://pictures/"/>
 						<param name="widget_header" value="$LOCALIZE[20094]"/>
 						<param name="widget_target" value="pictures"/>

@@ -896,39 +896,39 @@ msgstr ""
 
 msgctxt "#45000"
 msgid "Mixed widgets add-ons: audio, video, photos, software"
-msgstr "Смешанные виджеты дополнений: аудио, видео, фото, программные"
+msgstr "Mixed widgets add-ons: audio, video, photos, software"
 
 msgctxt "#45001"
 msgid "Widget 1"
-msgstr "Виджет 1"
+msgstr "Widget 1"
 
 msgctxt "#45002"
 msgid "Widget 2"
-msgstr "Виджет 2"
+msgstr "Widget 2"
 
 msgctxt "#45003"
 msgid "Widget 3"
-msgstr "Виджет 3"
+msgstr "Widget 3"
 
 msgctxt "#45004"
 msgid "Widget 4"
-msgstr "Виджет 4"
+msgstr "Widget 4"
 
 msgctxt "#45005"
 msgid "Widget 5"
-msgstr "Виджет 5"
+msgstr "Widget 5"
 
 msgctxt "#45006"
 msgid "Widget 6"
-msgstr "Виджет 6"
+msgstr "Widget 6"
 
 msgctxt "#45007"
 msgid "Widget 7"
-msgstr "Виджет 7"
+msgstr "Widget 7"
 
 msgctxt "#45008"
 msgid "Widget 8"
-msgstr "Виджет 8"
+msgstr "Widget 8"
 
 msgctxt "#45009"
 msgid "MOD safonov_ivan"
@@ -936,24 +936,33 @@ msgstr "MOD safonov_ivan"
 
 msgctxt "#45010"
 msgid "Widgets to fullscreen"
-msgstr "Виджеты на весь экран"
+msgstr "Widgets to fullscreen"
 
 msgctxt "#45011"
 msgid "Two panels of system buttons"
-msgstr "Две панели системных кнопок"
+msgstr "Two panels of system buttons"
 
 msgctxt "#45012"
 msgid "Hide weather background icon"
-msgstr "Скрыть фон на иконках погоды"
+msgstr "Hide weather background icon"
 
 msgctxt "#45013"
 msgid "Hide background on category icons"
-msgstr "Скрыть фон на иконках категорий"
+msgstr "Hide background on category icons"
 
 msgctxt "#45014"
 msgid "Display name of selected item"
-msgstr "Отображать название выбранного пункта"
+msgstr "Display name of selected item"
 
 msgctxt "#45015"
 msgid "Media settings"
-msgstr "Настройки медиатеки"
+msgstr "Media settings"
+
+msgctxt "#45016"
+msgid "TV & Radio"
+msgstr "TV & Radio"
+
+msgctxt "#45017"
+msgid "Widget settings"
+msgstr "Widget settings"
+
