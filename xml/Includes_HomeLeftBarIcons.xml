@@ -53,7 +53,7 @@
 						<include content="LeftBarWidgetListCategories" condition="[String.IsEqual(Skin.String(shift_categories),2) + !Skin.HasSetting(FullScreenWidgetMenu)] + Library.HasContent(music)">
 							<param name="content_path" value="library://music/"/>
 							<param name="widget_target" value="music"/>
-							<param name="list_id" value="7900"/>
+							<param name="list_id" value="7700"/>
 						</include>
 					</control>
 				</control>
