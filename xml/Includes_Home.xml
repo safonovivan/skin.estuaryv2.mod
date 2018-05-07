@@ -1024,6 +1024,12 @@
 	<include name="HideMainMenuWithWidgets">
 		<left>-40</left>
 	</include>
+	<include name="HideLabelKodi">
+		<left>-452</left>
+	</include>
+	<include name="NoHideLabelKodi">
+		<left>90</left>
+	</include>
 	<include name="twopanel">
 		<bottom>110</bottom>
 	</include>
