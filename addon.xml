@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuaryv2.mod" version="1.2.1" name="Estuary v2 mod (Krypton)" provider-name="Safonov_ivan, YLLOW_DRAGON, phil65, Ichabod Fletchman">
+<addon id="skin.estuaryv2.mod" version="1.2.2" name="Estuary v2 mod (Krypton)" provider-name="Safonov_ivan, YLLOW_DRAGON, phil65, Ichabod Fletchman">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.artistslideshow" version="2.0.0"/>
@@ -34,6 +34,6 @@
 			<screenshot>resources/screenshot-08.png</screenshot>
 			<screenshot>resources/screenshot-09.png</screenshot>
 		</assets>
-		<news>1.2.1[CR] - Восстановлена работа кнопки Дополнительная информация.[CR] - Фикс опции Название выбранного пункта.[CR] - Мелкие правки.</news>
+		<news>1.2.2[CR] - Восстановлена работа кнопки Дополнительная информация.[CR] - Фикс опции Название выбранного пункта.[CR] - Мелкие правки.</news>
 	</extension>
 </addon>
