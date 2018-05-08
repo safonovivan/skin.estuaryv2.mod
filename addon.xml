@@ -24,6 +24,15 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
+				<screenshot>resources/screenshot002.png</screenshot>
+				<screenshot>resources/screenshot003.png</screenshot>
+				<screenshot>resources/screenshot004.png</screenshot>
+				<screenshot>resources/screenshot005.png</screenshot>
+				<screenshot>resources/screenshot006.png</screenshot>
+				<screenshot>resources/screenshot007.png</screenshot>
+				<screenshot>resources/screenshot009.png</screenshot>
+				<screenshot>resources/screenshot012.png</screenshot>
 		</assets>
+		<news>1.2.1[CR] - Восстановлена работа кнопки Дополнительная информация.[CR] - Фикс опции Название выбранного пункта.[CR] - Мелкие правки.</news>
 	</extension>
 </addon>
