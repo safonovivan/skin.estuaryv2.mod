@@ -20,18 +20,19 @@
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
 		<forum>http://forum.kodi.tv/</forum>
 		<email>safonov11111985@gmail.com</email>
-		<source>https://github.com/safonovivan/repository.safonov_ivan.git</source>
+		<source>https://github.com/safonovivan/skin.estuaryv2.mod.git</source>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
-				<screenshot>resources/screenshot002.png</screenshot>
-				<screenshot>resources/screenshot003.png</screenshot>
-				<screenshot>resources/screenshot004.png</screenshot>
-				<screenshot>resources/screenshot005.png</screenshot>
-				<screenshot>resources/screenshot006.png</screenshot>
-				<screenshot>resources/screenshot007.png</screenshot>
-				<screenshot>resources/screenshot009.png</screenshot>
-				<screenshot>resources/screenshot012.png</screenshot>
+			<screenshot>resources/screenshot-01.png</screenshot>
+			<screenshot>resources/screenshot-02.png</screenshot>
+			<screenshot>resources/screenshot-03.png</screenshot>
+			<screenshot>resources/screenshot-04.png</screenshot>
+			<screenshot>resources/screenshot-05.png</screenshot>
+			<screenshot>resources/screenshot-06.png</screenshot>
+			<screenshot>resources/screenshot-07.png</screenshot>
+			<screenshot>resources/screenshot-08.png</screenshot>
+			<screenshot>resources/screenshot-09.png</screenshot>
 		</assets>
 		<news>1.2.1[CR] - Восстановлена работа кнопки Дополнительная информация.[CR] - Фикс опции Название выбранного пункта.[CR] - Мелкие правки.</news>
 	</extension>
