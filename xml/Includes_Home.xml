@@ -40,6 +40,7 @@
 					<top>0</top>
 					<right>2</right>
 					<height>90</height>
+					<width>auto</width>
 					<label>$PARAM[label] |$INFO[Container($PARAM[list_id]).Listitem.Label, [B],[/B]]</label>
 					<font>font25_title</font>
 					<shadowcolor>text_shadow</shadowcolor>
